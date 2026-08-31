@@ -12,6 +12,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = torch.nn.Linear(10, 1).to(device)
 model.eval()
 
+
+@app.get("/ping")
+async def ping():
+    return {"status": "ok"}
+	
 @app.post("/predict")
 async def predict(data: InputData):
     x = torch.tensor(data.values, dtype=torch.float32).to(device)
