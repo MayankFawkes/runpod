@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "Mayank Gupta"}
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "fastapi (>=0.141.1,<0.142.0)",
     "torch (>=2.13.0,<3.0.0)",
