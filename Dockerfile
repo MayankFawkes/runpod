@@ -6,10 +6,7 @@ WORKDIR /app
 COPY . .
 
 # Install Poetry using the recommended installer
-RUN curl -sSL https://install.python-poetry.org | python3.12 -
-
-# Add Poetry to the PATH so it's available globally
-ENV PATH="${PATH}:/root/.local/bin"
+RUN pip install --break-system-packages poetry
 
 # Install the dependencies with Poetry
 RUN poetry install --no-root --no-interaction --only main
