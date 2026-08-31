@@ -1,5 +1,5 @@
 # Use an official PyTorch image with CUDA support as base (contains Python, CUDA, PyTorch)
-FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
+FROM pytorch/pytorch:2.13.0-cuda13.2-cudnn9-runtime
 
 # Install FastAPI and Uvicorn (and any other dependencies your app needs)
 RUN pip install --no-cache-dir fastapi uvicorn
